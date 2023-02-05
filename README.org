@@ -1,0 +1,15 @@
+#+TITLE:       Competitive Programming Topics Collection
+#+AUTHOR:      Likhon Barai
+#+EMAIL:        likhonhere007@gmail.com
+#+DATE:        [2023-Feb-05 Sun]
+#+TAGS:         programming code c++
+
+:PROPERTIES:
+#+OPTIONS:
+:END:
+
+This is my regular competitive programming user collections. The topics here organized by each separated folder, which is very easy to look for. I hope to continue my competitive programming and grow this by time.
+
+#+BEGIN_CENTER
+© Likhon Barai
+#+END_CENTER
