@@ -22,7 +22,8 @@ int main() {
 
   int n, len, key, userChoice = 0, index, x, y;
   int a[] = {5, 4, 3, 2, 1};
-  len = sizeof(a) / sizeof(int);
+  // len = sizeof(a) / sizeof(int);
+  len = sizeof(a) / sizeof(a[0]);
 
   printf("Before Sort : ");
   print(a, len);

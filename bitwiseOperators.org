@@ -1,0 +1,19 @@
+#+TITLE:        Bitwise Operators in C++
+#+AUTHOR:       Likhon Barai
+#+EMAIL:        likhonhere007@gmail.com
+#+DATE:         [2023-Mar-05 Sun]
+#+TAGS:         blog cpp
+
+:PROPERTIES:
+#+OPTIONS:
+:END:
+
+* Table of Contents                                                     :TOC:
+- [[#left-shift-][Left Shift <<]]
+- [[#right-shift-][Right Shift >>]]
+
+* Left Shift <<
+We know that, left-shift = X * 2^Y.
+
+* Right Shift >>
+(X >> Y) is equivalent to [X / 2^Y].
