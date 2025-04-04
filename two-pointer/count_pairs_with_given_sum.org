@@ -21,45 +21,89 @@ Input: arr[] = [10, 12, 10, 15, -1], target = 125
 Output: 0
 #+END_EXAMPLE
 
+#+BEGIN_EXAMPLE
 Constraints:
 1 <= arr.size() <= 105
 -104 <= arr[i] <= 104
 1 <= target <= 104
+#+END_EXAMPLE
 
 #+BEGIN_SRC c++
-  int countPairs(vector<int> &arr, int target) {
-        int left = 0, right = arr.size() - 1, cnt = 0;
-        
-        sort(arr.begin(), arr.end()); // sort the given array in O(NlogN) Time
-        
-        while (left < right) {
-            int sum = arr[left] + arr[right];
+int countPairs(vector<int> &arr, int target) {
+    int left = 0, right = arr.size() - 1, cnt = 0;
+    
+    sort(arr.begin(), arr.end()); // sort the given array in O(NlogN) Time
+    
+    while (left < right) {
+        int sum = arr[left] + arr[right];
 
-            if (sum == target) {
-                if (arr[left] == arr[right]) {  
-                    int freq = right - left + 1;  // Count of identical numbers
-                    cnt += (freq * (freq - 1)) / 2;  // nC2 formula
-                    break; 
-                } else {
-                    int leftFreq = 0, rightFreq = 0;
-                    int leftVal = arr[left], rightVal = arr[right];
+        if (sum == target) {
+            if (arr[left] == arr[right]) {  
+                int freq = right - left + 1;  // Count of identical numbers
+                cnt += (freq * (freq - 1)) / 2;  // nC2 formula
+                break; 
+            } else {
+                int leftFreq = 0, rightFreq = 0;
+                int leftVal = arr[left], rightVal = arr[right];
 
-                    while (left <= right && arr[left] == leftVal) {
-                        leftFreq++;
-                        left++;
-                    }
-                    while (left <= right && arr[right] == rightVal) {
-                        rightFreq++;
-                        right--;
-                    }
-
-                    cnt += (leftFreq * rightFreq);
+                while (left <= right && arr[left] == leftVal) {
+                    leftFreq++;
+                    left++;
                 }
-            } 
-            else if (sum > target) right--;
-            else left++;
-        }
-        
-        return cnt;
+                while (left <= right && arr[right] == rightVal) {
+                    rightFreq++;
+                    right--;
+                }
+
+                cnt += (leftFreq * rightFreq);
+            }
+        } 
+        else if (sum > target) right--;
+        else left++;
     }
+    
+    return cnt;
+}
 #+END_SRC
+
+<details>
+  <summary><strong>Code (Click to Expand)</strong></summary>
+
+  ```c++
+  int countPairs(vector<int> &arr, int target) {
+      int left = 0, right = arr.size() - 1, cnt = 0;
+      
+      sort(arr.begin(), arr.end()); // sort the given array in O(NlogN) Time
+      
+      while (left < right) {
+          int sum = arr[left] + arr[right];
+
+          if (sum == target) {
+              if (arr[left] == arr[right]) {  
+                  int freq = right - left + 1;  // Count of identical numbers
+                  cnt += (freq * (freq - 1)) / 2;  // nC2 formula
+                  break; 
+              } else {
+                  int leftFreq = 0, rightFreq = 0;
+                  int leftVal = arr[left], rightVal = arr[right];
+
+                  while (left <= right && arr[left] == leftVal) {
+                      leftFreq++;
+                      left++;
+                  }
+                  while (left <= right && arr[right] == rightVal) {
+                      rightFreq++;
+                      right--;
+                  }
+
+                  cnt += (leftFreq * rightFreq);
+              }
+          } 
+          else if (sum > target) right--;
+          else left++;
+      }
+      
+      return cnt;
+  }
+
+</details> ```
