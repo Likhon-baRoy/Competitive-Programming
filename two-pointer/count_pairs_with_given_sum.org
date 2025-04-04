@@ -1,6 +1,5 @@
 #+TITLE: Count Pairs with Given Sum
 #+AUTHOR: Likhon Baroi
-#+STARTUP: showall
 
 * Table of Contents
 1. [[#problem-link][Problem Link]]
