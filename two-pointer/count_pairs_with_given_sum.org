@@ -1,6 +1,7 @@
 #+TITLE: Count Pairs with Given Sum
 #+AUTHOR: Likhon Baroi
-#+STARTUP: showall
+#+STARTUP: overview
+#+TOC: headlines 2
 
 * Table of Contents
   - [[#problem-link][Problem Link]]
@@ -17,7 +18,7 @@
 
   Given an array `arr[]` and an integer `target`. You have to find the number of pairs in `arr[]` which sum up to the given `target`.
 
-**Go to Table of Contents**: [[#table-of-contents]]
+[[#table-of-contents][Go Back to Table of Contents]]
 
 ---
 
@@ -50,7 +51,7 @@ Output: 0
 1 <= target <= 10^4
 #+END_SRC
 
-**Go to Table of Contents**: [[#table-of-contents]]
+[[#table-of-contents][Go Back to Table of Contents]]
 
 ---
 
@@ -106,7 +107,7 @@ int countPairs(vector<int> &arr, int target) {
 }
 #+END_SRC
 
-**Go to Table of Contents**: [[#table-of-contents]]
+[[#table-of-contents][Go Back to Table of Contents]]
 
 ---
 
@@ -157,7 +158,7 @@ int countPairs(vector<int> &arr, int target) {
 }
 #+END_SRC
 
-**Go to Table of Contents**: [[#table-of-contents]]
+[[#table-of-contents][Go Back to Table of Contents]]
 
 ---
 
@@ -189,5 +190,4 @@ int countPairs(vector<int> &arr, int target) {
     return cnt;
 }
 #+END_SRC
-
-**[[#table-of-contents][Go to Table of Contents]]**: 
+[[#table-of-contents][Go Back to Table of Contents]]
