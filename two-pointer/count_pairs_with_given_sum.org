@@ -190,4 +190,4 @@ int countPairs(vector<int> &arr, int target) {
 }
 #+END_SRC
 
-**[Go to Table of Contents[#table-of-contents]]**: 
+**[[#table-of-contents][Go to Table of Contents]]**: 
