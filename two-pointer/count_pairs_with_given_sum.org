@@ -19,7 +19,7 @@
 
 ---
 
-* Examples  :PROPERTIES: :ID: examples :END:
+* Examples :PROPERTIES: :ID: examples :END:
 
 #+BEGIN_SRC text
 Input: arr[] = [1, 5, 7, -1, 5], target = 6 
@@ -40,7 +40,7 @@ Output: 0
 
 ---
 
-* Constraints  :PROPERTIES: :ID: constraints :END:
+* Constraints :PROPERTIES: :ID: constraints :END:
 
 #+BEGIN_SRC text
 1 <= arr.size() <= 10^5
@@ -51,7 +51,6 @@ Output: 0
 ---
 
 * Approach 1: Using Two-Pointer Technique  :PROPERTIES: :ID: approach-1 :END:
-
   - Sort the given array in `O(N log N)` time.
   - Use two pointers (`left` and `right`) to find valid pairs.
   - If the sum matches the `target`, count the pairs and move the pointers accordingly.
@@ -108,15 +107,14 @@ int countPairs(vector<int> &arr, int target) {
 ---
 
 * Approach 2: Two-Pointer with Identical Group Handling  :PROPERTIES: :ID: approach-2 :END:
-
   - Similar to Approach 1, but handles identical groups differently.
   - If a group of numbers is identical (e.g., `[1, 1, 1, 1]`), we count combinations separately.
   - Uses `nC2` formula when `leftVal == rightVal`.
 
 **Time Complexity:**  
-- Sorting takes `O(N log N)` time.  
+- Sorting the array takes `O(N log N)` time.  
 - The two-pointer traversal takes `O(N)` time.  
-- Hence, total time complexity is `O(N log N)`.
+- So, the total time complexity is `O(N log N)`.
 
 **Space Complexity:**  
 - `O(1)` for the space used by pointers and other variables.
@@ -160,18 +158,15 @@ int countPairs(vector<int> &arr, int target) {
 ---
 
 * Approach 3: HashMap  :PROPERTIES: :ID: approach-3 :END:
-
-  - Uses a HashMap (unordered_map in C++) to store the frequency of each element as we traverse the array.
-  - For each element, check if `target - element` exists in the map, and count the number of pairs.
-  - Update the frequency of the current element in the map.
-
+  - Efficient solution using HashMap to store the frequency of elements.
+  - For each element, check if the difference `target - num` exists in the map.
+  
 **Time Complexity:**  
-- Traversing the array takes `O(N)` time.  
-- Each map lookup and insertion takes `O(1)` on average.  
-- So, the total time complexity is `O(N)`.
+- The time complexity is `O(N)` since we are doing a single pass through the array.  
+- Inserting into the hashmap takes `O(1)` time on average.
 
 **Space Complexity:**  
-- `O(N)` for the space used by the HashMap to store the frequencies of elements.
+- `O(N)` for the hashmap used to store frequencies of elements.
 
 #+BEGIN_SRC c++  
 int countPairs(vector<int> &arr, int target) {
@@ -191,5 +186,3 @@ int countPairs(vector<int> &arr, int target) {
 #+END_SRC
 
 **Go to Table of Contents**: [[#table-of-contents]]
-
----
