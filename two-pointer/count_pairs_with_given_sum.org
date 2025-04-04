@@ -17,6 +17,8 @@
 
   Given an array `arr[]` and an integer `target`. You have to find the number of pairs in `arr[]` which sum up to the given `target`.
 
+**Go to Table of Contents**: [[#table-of-contents]]
+
 ---
 
 * Examples  :ID: examples
@@ -37,6 +39,8 @@ Input: arr[] = [10, 12, 10, 15, -1], target = 125
 Output: 0
 #+END_SRC
 
+**Go to Table of Contents**: [[#table-of-contents]]
+
 ---
 
 * Constraints  :ID: constraints
@@ -45,6 +49,8 @@ Output: 0
 -10^4 <= arr[i] <= 10^4
 1 <= target <= 10^4
 #+END_SRC
+
+**Go to Table of Contents**: [[#table-of-contents]]
 
 ---
 
