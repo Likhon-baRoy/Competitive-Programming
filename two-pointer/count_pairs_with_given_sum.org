@@ -16,7 +16,7 @@
 * Problem Link
   [[https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1][Count Pairs with Given Sum - GeeksforGeeks]]
 
-  Given an array `arr[]` and an integer `target`. You have to find the number of pairs in `arr[]` which sum up to the given `target`.
+  Given an array ~arr[]~ and an integer ~target~. You have to find the number of pairs in ~arr[]~ which sum up to the given ~target~.
 
 ---
 
@@ -54,18 +54,18 @@ Output: 0
 ---
 
 * Approach 1: Using Two-Pointer Technique
-  - Sort the given array in `O(N log N)` time.
-  - Use two pointers (`left` and `right`) to find valid pairs.
-  - If the sum matches the `target`, count the pairs and move the pointers accordingly.
+  - Sort the given array in ~O(N log N)~ time.
+  - Use two pointers (~left~ and ~right~) to find valid pairs.
+  - If the sum matches the ~target~, count the pairs and move the pointers accordingly.
   - Special handling for identical elements.
 
 *Time Complexity:*  
-- Sorting the array takes `O(N log N)` time.  
-- The two-pointer traversal takes `O(N)` time.  
-- So, the total time complexity is `O(N log N)`.
+- Sorting the array takes ~O(N log N)~ time.  
+- The two-pointer traversal takes ~O(N)~ time.  
+- So, the total time complexity is ~O(N log N)~.
 
 *Space Complexity:*  
-- `O(1)` for the space used by pointers and other variables.
+- ~O(1)~ for the space used by pointers and other variables.
 
 #+BEGIN_SRC c++
 int countPairs(vector<int> &arr, int target) {
@@ -111,16 +111,16 @@ int countPairs(vector<int> &arr, int target) {
 
 * Approach 2: Two-Pointer with Identical Group Handling
   - Similar to Approach 1, but handles identical groups differently.
-  - If a group of numbers is identical (e.g., `[1, 1, 1, 1]`), we count combinations separately.
-  - Uses `nC2` formula when `leftVal == rightVal`.
+  - If a group of numbers is identical (e.g., ~[1, 1, 1, 1]~), we count combinations separately.
+  - Uses ~nC2~ formula when ~leftVal == rightVal~.
 
 *Time Complexity:*  
-- Sorting the array takes `O(N log N)` time.  
-- The two-pointer traversal takes `O(N)` time.  
-- So, the total time complexity is `O(N log N)`.
+- Sorting the array takes ~O(N log N)~ time.  
+- The two-pointer traversal takes ~O(N)~ time.  
+- So, the total time complexity is ~O(N log N)~.
 
 *Space Complexity:*  
-- `O(1)` for the space used by pointers and other variables.
+- ~O(1)~ for the space used by pointers and other variables.
 
 #+BEGIN_SRC c++
 int countPairs(vector<int> &arr, int target) {
@@ -162,14 +162,14 @@ int countPairs(vector<int> &arr, int target) {
 
 * Approach 3: HashMap
   - Efficient solution using HashMap to store the frequency of elements.
-  - For each element, check if the difference `target - num` exists in the map.
+  - For each element, check if the difference ~target - num~ exists in the map.
   
 *Time Complexity:*  
-- The time complexity is `O(N)` since we are doing a single pass through the array.  
-- Inserting into the hashmap takes `O(1)` time on average.
+- The time complexity is ~O(N)~ since we are doing a single pass through the array.  
+- Inserting into the hashmap takes ~O(1)~ time on average.
 
 *Space Complexity:*  
-- `O(N)` for the hashmap used to store frequencies of elements.
+- ~O(N)~ for the hashmap used to store frequencies of elements.
 
 #+BEGIN_SRC c++  
 int countPairs(vector<int> &arr, int target) {
