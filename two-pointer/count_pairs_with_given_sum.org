@@ -7,9 +7,9 @@
   - [[#problem-link][Problem Link]]
   - [[#examples][Examples]]
   - [[#constraints][Constraints]]
-  - [[#approach-1][Approach 1: Using Two-Pointer Technique]]
-  - [[#approach-2][Approach 2: Two-Pointer with Identical Group Handling]]
-  - [[#approach-3][Approach 3: HashMap]]
+  - [[#approach-1-using-two-pointer-technique][Approach 1: Using Two-Pointer Technique]]
+  - [[#approach-2-two-pointer-with-identical-group-handling][Approach 2: Two-Pointer with Identical Group Handling]]
+  - [[#approach-3-hashmap][Approach 3: HashMap]]
 
 ---
 
@@ -38,7 +38,7 @@ Input: arr[] = [10, 12, 10, 15, -1], target = 125
 Output: 0
 #+END_SRC
 
-**Go to Table of Contents**: [[#table-of-contents]]
+[[#table-of-contents][Go Back to Table of Contents]]
 
 ---
 
