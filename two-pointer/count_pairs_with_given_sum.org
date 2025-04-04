@@ -1,0 +1,65 @@
+*problem link:* https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1
+
+Given an array arr[] and an integer target. You have to find numbers of pairs in array arr[] which sums up to given target.
+
+Examples:
+
+#+BEGIN_EXAMPLE
+Input: arr[] = [1, 5, 7, -1, 5], target = 6 
+Output: 3
+Explanation: Pairs with sum 6 are (1, 5), (7, -1) and (1, 5). 
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+Input: arr[] = [1, 1, 1, 1], target = 2 
+Output: 6
+Explanation: Pairs with sum 2 are (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1).
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+Input: arr[] = [10, 12, 10, 15, -1], target = 125
+Output: 0
+#+END_EXAMPLE
+
+Constraints:
+1 <= arr.size() <= 105
+-104 <= arr[i] <= 104
+1 <= target <= 104
+
+#+BEGIN_SRC c++
+  int countPairs(vector<int> &arr, int target) {
+        int left = 0, right = arr.size() - 1, cnt = 0;
+        
+        sort(arr.begin(), arr.end()); // sort the given array in O(NlogN) Time
+        
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            if (sum == target) {
+                if (arr[left] == arr[right]) {  
+                    int freq = right - left + 1;  // Count of identical numbers
+                    cnt += (freq * (freq - 1)) / 2;  // nC2 formula
+                    break; 
+                } else {
+                    int leftFreq = 0, rightFreq = 0;
+                    int leftVal = arr[left], rightVal = arr[right];
+
+                    while (left <= right && arr[left] == leftVal) {
+                        leftFreq++;
+                        left++;
+                    }
+                    while (left <= right && arr[right] == rightVal) {
+                        rightFreq++;
+                        right--;
+                    }
+
+                    cnt += (leftFreq * rightFreq);
+                }
+            } 
+            else if (sum > target) right--;
+            else left++;
+        }
+        
+        return cnt;
+    }
+#+END_SRC
