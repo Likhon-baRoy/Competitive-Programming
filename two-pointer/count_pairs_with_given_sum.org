@@ -1,7 +1,6 @@
 #+TITLE: Count Pairs with Given Sum
 #+AUTHOR: Likhon Baroi
 #+STARTUP: overview
-#+TOC: headlines 2
 
 * Table of Contents
   - [[#problem-statement][Problem Statement]]
@@ -17,8 +16,6 @@
   [[https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1][Count Pairs with Given Sum - GeeksforGeeks]]
 
   Given an array ~arr[]~ and an integer ~target~. You have to find the number of pairs in ~arr[]~ which sum up to the given ~target~.
-
----
 
 ** Examples
 #+BEGIN_SRC text
@@ -37,10 +34,6 @@ Explanation: Pairs with sum 2 are (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1)
 Input: arr[] = [10, 12, 10, 15, -1], target = 125
 Output: 0
 #+END_SRC
-
-[[#table-of-contents][Go Back to Table of Contents]]
-
----
 
 ** Constraints
 #+BEGIN_SRC text
