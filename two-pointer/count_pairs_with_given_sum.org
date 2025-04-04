@@ -13,16 +13,14 @@
 
 ---
 
-* Problem Link  :ID: problem-link
+* Problem Link
   [[https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1][Count Pairs with Given Sum - GeeksforGeeks]]
 
   Given an array `arr[]` and an integer `target`. You have to find the number of pairs in `arr[]` which sum up to the given `target`.
 
-[[#table-of-contents][Go Back to Table of Contents]]
-
 ---
 
-* Examples  :ID: examples
+* Examples
 #+BEGIN_SRC text
 Input: arr[] = [1, 5, 7, -1, 5], target = 6 
 Output: 3
@@ -44,7 +42,7 @@ Output: 0
 
 ---
 
-* Constraints  :ID: constraints
+* Constraints
 #+BEGIN_SRC text
 1 <= arr.size() <= 10^5
 -10^4 <= arr[i] <= 10^4
@@ -55,7 +53,7 @@ Output: 0
 
 ---
 
-* Approach 1: Using Two-Pointer Technique  :ID: approach-1
+* Approach 1: Using Two-Pointer Technique
   - Sort the given array in `O(N log N)` time.
   - Use two pointers (`left` and `right`) to find valid pairs.
   - If the sum matches the `target`, count the pairs and move the pointers accordingly.
@@ -111,7 +109,7 @@ int countPairs(vector<int> &arr, int target) {
 
 ---
 
-* Approach 2: Two-Pointer with Identical Group Handling  :ID: approach-2
+* Approach 2: Two-Pointer with Identical Group Handling
   - Similar to Approach 1, but handles identical groups differently.
   - If a group of numbers is identical (e.g., `[1, 1, 1, 1]`), we count combinations separately.
   - Uses `nC2` formula when `leftVal == rightVal`.
@@ -162,7 +160,7 @@ int countPairs(vector<int> &arr, int target) {
 
 ---
 
-* Approach 3: HashMap  :ID: approach-3
+* Approach 3: HashMap
   - Efficient solution using HashMap to store the frequency of elements.
   - For each element, check if the difference `target - num` exists in the map.
   
