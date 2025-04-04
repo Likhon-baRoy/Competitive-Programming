@@ -4,7 +4,7 @@
 #+TOC: headlines 2
 
 * Table of Contents
-  - [[#problem-link][Problem Link]]
+  - [[#problem-statement][Problem Statement]]
   - [[#examples][Examples]]
   - [[#constraints][Constraints]]
   - [[#approach-1-using-two-pointer-technique][Approach 1: Using Two-Pointer Technique]]
@@ -13,14 +13,14 @@
 
 ---
 
-* Problem Link
+* Problem Statement
   [[https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1][Count Pairs with Given Sum - GeeksforGeeks]]
 
   Given an array ~arr[]~ and an integer ~target~. You have to find the number of pairs in ~arr[]~ which sum up to the given ~target~.
 
 ---
 
-* Examples
+** Examples
 #+BEGIN_SRC text
 Input: arr[] = [1, 5, 7, -1, 5], target = 6 
 Output: 3
@@ -42,7 +42,7 @@ Output: 0
 
 ---
 
-* Constraints
+** Constraints
 #+BEGIN_SRC text
 1 <= arr.size() <= 10^5
 -10^4 <= arr[i] <= 10^4
