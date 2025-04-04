@@ -3,12 +3,12 @@
 #+STARTUP: showall
 
 * Table of Contents
-1. [[#problem-link][Problem Link]]
-2. [[#examples][Examples]]
-3. [[#constraints][Constraints]]
-4. [[#approach-1][Approach 1: Using Two-Pointer Technique]]
-5. [[#approach-2][Approach 2: Two-Pointer with Identical Group Handling]]
-6. [[#approach-3][Approach 3: HashMap]]
+  - [[#problem-link][Problem Link]]
+  - [[#examples][Examples]]
+  - [[#constraints][Constraints]]
+  - [[#approach-1][Approach 1: Using Two-Pointer Technique]]
+  - [[#approach-2][Approach 2: Two-Pointer with Identical Group Handling]]
+  - [[#approach-3][Approach 3: HashMap]]
 
 ---
 
