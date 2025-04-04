@@ -59,12 +59,12 @@ Output: 0
   - If the sum matches the `target`, count the pairs and move the pointers accordingly.
   - Special handling for identical elements.
 
-**Time Complexity:**  
+*Time Complexity:*  
 - Sorting the array takes `O(N log N)` time.  
 - The two-pointer traversal takes `O(N)` time.  
 - So, the total time complexity is `O(N log N)`.
 
-**Space Complexity:**  
+*Space Complexity:*  
 - `O(1)` for the space used by pointers and other variables.
 
 #+BEGIN_SRC c++
@@ -114,12 +114,12 @@ int countPairs(vector<int> &arr, int target) {
   - If a group of numbers is identical (e.g., `[1, 1, 1, 1]`), we count combinations separately.
   - Uses `nC2` formula when `leftVal == rightVal`.
 
-**Time Complexity:**  
+*Time Complexity:*  
 - Sorting the array takes `O(N log N)` time.  
 - The two-pointer traversal takes `O(N)` time.  
 - So, the total time complexity is `O(N log N)`.
 
-**Space Complexity:**  
+*Space Complexity:*  
 - `O(1)` for the space used by pointers and other variables.
 
 #+BEGIN_SRC c++
@@ -164,11 +164,11 @@ int countPairs(vector<int> &arr, int target) {
   - Efficient solution using HashMap to store the frequency of elements.
   - For each element, check if the difference `target - num` exists in the map.
   
-**Time Complexity:**  
+*Time Complexity:*  
 - The time complexity is `O(N)` since we are doing a single pass through the array.  
 - Inserting into the hashmap takes `O(1)` time on average.
 
-**Space Complexity:**  
+*Space Complexity:*  
 - `O(N)` for the hashmap used to store frequencies of elements.
 
 #+BEGIN_SRC c++  
